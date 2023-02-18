@@ -2,10 +2,22 @@
   "expo": {
     "name": "budgetx",
     "slug": "budgetx",
-    "version": "1.0.0",
+    "version": "1.0.7",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "contact2abhi",
+            "project": "android",
+            "authToken": "62e5546b6c184021bc1e99c44b8f09cb5316d5dec9dd415e91fae0dd8a4e5aa2"
+          }
+        }
+      ]
+    },
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -24,10 +36,20 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.contact2abhi.budget"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6aacc554-70cc-49e9-8d04-7b7d1d5bb259"
+      }
+    },
+    "owner": "contact2abhi",
+    "plugins": [
+      "sentry-expo"
+    ]
   }
 }
